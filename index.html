@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/css.css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="js/js.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="video">
+				<video src="spin.mp4" autoplay loop></video>
+				<video src="explode.mp4" class="hidden"></video>
+			</div>
+			<div class="form">
+				<div class="logo">
+					<img src="logo.png"/>
+				</div>
+				<form action="YOUR_LOGIN_SCRIPT.php" method="post">
+					<div class="head">
+						<h1>Members Only</h1>
+						<h2>Please Login</h2>
+					</div>
+					<div class="body">
+						<label>Username</label>
+						<input type="text" name="username"/>
+						<label>Password</label>
+						<input type="password" name="password"/>
+					</div>
+					<div class="foot">
+						<button type="submit">Log in</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
