@@ -3,6 +3,7 @@ $(function(){
 	$("video#spin").click(function(){
 		
 		$(this).get(0).playbackRate = 3;
+		$(this).removeAttr("loop");
 		$(this).on("ended", function(){
 			
 			$("video#spin").hide();
