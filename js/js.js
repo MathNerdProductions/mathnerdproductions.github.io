@@ -1,10 +1,18 @@
 $(function(){
 	
-	$("video").click(function(){
+	$("video#spin").click(function(){
 		
-		$(this).attr("src", "explode.mp4");
-		$(this).removeAttr("loop").delay(1000).fadeOut(100, function(){
-			$("div.form").fadeIn(300);
+		$(this).get(0).playbackRate = 3;
+		$(this).on("ended", function(){
+			
+			$("video#spin").hide();
+			$("video#explode").show();
+			$("video#explode").get(0).play();
+			$("video#explode").delay(500).fadeOut(500, function(){
+				$(this).hide();
+				$("div.form").fadeIn(500);
+			})
+			
 		});
 		
 	});
